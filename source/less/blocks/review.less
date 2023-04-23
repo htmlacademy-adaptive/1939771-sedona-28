@@ -1,9 +1,37 @@
+@media (min-width: @tablet-width) {
+  .review {
+    width: 648px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
 .review__wrapper {
   padding-top: 36px;
   padding-bottom: 28px;
   text-align: center;
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 436px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 108px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin: 0 auto;
+    padding-top: 115px;
+    padding-bottom: 68px;
+  }
 }
 
 .review__title {
