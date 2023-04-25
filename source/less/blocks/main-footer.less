@@ -5,6 +5,20 @@
   gap: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 47px 120px;
+  }
 }
 
 .main-footer__tag {

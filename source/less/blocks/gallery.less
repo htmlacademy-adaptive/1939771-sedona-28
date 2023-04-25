@@ -6,11 +6,77 @@
   margin-left: 20px;
   margin-right: 20px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .gallery__item {
-  padding-top: 25px;
   padding-bottom: 25px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__item--big {
+    width: 100%;
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @color-grey;
+    padding: 22px 20px 15px 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__wrapper {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 28px;
+    background-color: @color-black;
+    opacity: 0.3;
+    bottom: 0;
+  }
+}
+
+.gallery__link {
+  display: block;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .gallery__title {
@@ -20,15 +86,38 @@
   font-size: 14px;
   line-height: 21px;
   color: @color-black;
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+    opacity: 1;
+  }
 }
 
 .gallery__author {
   margin: 0;
   margin-bottom: 11px;
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+    opacity: 1;
+  }
 }
 
-.gallery__link {
-  display: block;
-  margin-bottom: 15px;
+.gallery__like-count {
+  font-weight: 700;
+  color: @color-black;
+  margin-left: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+  }
 }

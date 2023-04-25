@@ -1,0 +1,34 @@
+.main-header__logo {
+  text-align: center;
+}
+
+// Tablet
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    position: relative;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header__logo {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+
+// Desktop
+
+@media (min-width: @desktop-width) {
+  .main-header__logo {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+  }
+}

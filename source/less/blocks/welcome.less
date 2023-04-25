@@ -5,6 +5,18 @@
   padding-top: 32px;
   padding-bottom: 32px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 520px;
+    padding-top: 47px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 484px;
+    padding-top: 59px;
+    padding-bottom: 44px;
+  }
 }
 
 .welcome__title {
@@ -14,10 +26,13 @@
   color: @color-black;
   margin-top: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .welcome__description {
-  color: @color-dark-grey;
   margin: 0;
 }
 
