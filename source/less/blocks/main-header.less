@@ -1,34 +1,13 @@
-.main-header__logo {
+.main-header {
   text-align: center;
+  position: relative;
 }
 
-// Tablet
-
-@media (min-width: @tablet-width) {
-  .main-header {
-    position: relative;
-  }
+.main-header__logo {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 1;
 }
 
-@media (min-width: @tablet-width) {
-  .main-header__logo {
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    left: 50%;
-    z-index: 1;
-  }
-}
-
-
-// Desktop
-
-@media (min-width: @desktop-width) {
-  .main-header__logo {
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    left: 50%;
-    z-index: 1;
-  }
-}

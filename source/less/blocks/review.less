@@ -1,34 +1,26 @@
-@media (min-width: @tablet-width) {
-  .review {
-    width: 648px;
-    margin: 0 auto;
-  }
-}
+.review {
+  border-bottom: 1px solid @color-grey;
 
-@media (min-width: @desktop-width) {
-  .review {
-    width: 960px;
-    margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
   }
 }
 
 .review__wrapper {
+  width: 87%;
+  max-width: 436px;
+  margin: 0 auto;
   padding-top: 36px;
   padding-bottom: 28px;
   text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
 
   @media (min-width: @tablet-width) {
-    width: 436px;
-    margin: 0 auto;
+    width: 100%;
     padding-top: 64px;
     padding-bottom: 108px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 436px;
-    margin: 0 auto;
     padding-top: 115px;
     padding-bottom: 68px;
   }
@@ -41,6 +33,10 @@
   font-size: 18px;
   line-height: 26px;
   color: @color-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .review__description {

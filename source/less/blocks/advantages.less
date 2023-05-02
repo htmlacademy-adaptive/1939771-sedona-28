@@ -3,7 +3,7 @@
 }
 
 .advantages__wrapper {
-  width: 284px;
+  width: 88%;
   margin: 0 auto;
   padding-top: 24px;
   padding-bottom: 28px;
@@ -30,10 +30,19 @@
   }
 }
 
+.advantages__item {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 33.33%;
+  }
+}
+
 .advantages__item-wrapper {
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    box-sizing: border-box;
     padding: 41px 33px 63px 33px;
   }
 
@@ -41,6 +50,7 @@
     padding: 52px 50px;
   }
 }
+
 
 .advantages__title {
   margin-top: 0;
