@@ -16,4 +16,21 @@
   height: 48px;
   padding: 12px;
   box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    background-color: @light-blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+  }
+
+  &:active .social__icon {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 1px solid @color-blue;
+  }
 }

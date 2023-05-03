@@ -1,6 +1,25 @@
+.modal-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: @bg-color;
+  display: none;
+}
+
 .modal-error__wrapper {
   text-align: center;
   padding: 45px 42px 35px 42px;
+  box-sizing: border-box;
+  background-color: @color-white;
+  margin: 0 auto;
+  max-width: 400px;
+
+  @media (min-width: @tablet-width) {
+    padding: 54px 48px 49px 48px;
+  }
 }
 
 .modal-error__title {
@@ -11,6 +30,10 @@
   line-height: 26px;
   color: @color-black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .modal-error__description {
@@ -19,11 +42,15 @@
 }
 
 .modal-error__button {
-  width: 180px;
+  width: 56%;
   height: 58px;
   padding: 0;
   background-color: @color-blue;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }

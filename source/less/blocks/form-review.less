@@ -1,12 +1,13 @@
 .form-review {
+  width: 100%;
   margin: 0;
   border: none;
   padding-bottom: 56px;
 }
 
 .form-review__input {
-  width: 279px;
-  height: 150px;
+  width: 100%;
+  max-height: 150px;
   background-color: @color-grey;
   font-weight: 700;
   font-size: 18px;
@@ -14,4 +15,8 @@
   border: none;
   padding: 16px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    max-height: 160px;
+  }
 }

@@ -13,6 +13,7 @@
 }
 
 .about__item--blue {
+  width: 100%;
   background-color: @color-blue;
   display: flex;
   flex-direction: column;
@@ -26,12 +27,15 @@
 .about__item-city {
   padding: 54px 18px 40px 18px;
   text-align: center;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    width: 256px;
     padding: 52px 33px 31px 33px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 400px;
     padding: 52px 50px 51px 50px;
   }
 }
@@ -39,12 +43,15 @@
 .about__item-bridge {
   padding: 37px 18px;
   text-align: center;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
+    width: 256px;
     padding: 52px 33px 31px 33px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 400px;
     padding: 52px 50px 51px 50px;
   }
 }

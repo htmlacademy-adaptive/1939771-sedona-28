@@ -1,6 +1,25 @@
+.modal-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: @bg-color;
+  display: none;
+}
+
 .modal-success__wrapper {
   text-align: center;
   padding: 44px 20px 34px 20px;
+  box-sizing: border-box;
+  background-color: @color-white;
+  margin: 0 auto;
+  max-width: 640px;
+
+  @media (min-width: @tablet-width) {
+    padding: 53px 99px 30px 99px;
+  }
 }
 
 .modal-success__title {
@@ -11,6 +30,10 @@
   line-height: 26px;
   color: @color-black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .modal-success__description {
@@ -18,10 +41,17 @@
 }
 
 .modal-success__button-wrapper {
+  margin: 0 auto;
+  max-width: 640px;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: @color-grey;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
 }
 
 .modal-success__button {

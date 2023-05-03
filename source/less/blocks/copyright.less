@@ -2,6 +2,23 @@
   display: flex;
   align-items: center;
   gap: 12px;
+
+  &:hover .copyright__text {
+    color: @light-blue;
+  }
+
+  &:hover .copyright__icon {
+    fill: @light-blue;
+  }
+
+  &:active .copyright__text {
+    color: @grey;
+  }
+
+  &:active .copyright__icon {
+    fill: @grey;
+  }
+
 }
 
 .copyright__text {
