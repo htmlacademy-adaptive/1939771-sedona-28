@@ -5,11 +5,11 @@
   background-size: contain, cover;
   background-position: center bottom, center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
     background-image: url("../img/devider-tablet.svg"), url("../img/bg-desktop.jpg");
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) and (min-resolution: 2dppx) {
     background-image: url("../img/devider-desktop.svg"), url("../img/bg-desktop.jpg");
   }
 }
