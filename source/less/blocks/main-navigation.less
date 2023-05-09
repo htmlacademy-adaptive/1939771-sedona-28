@@ -116,6 +116,21 @@
   box-shadow: 0 5px 0 0 @color-blue, 0 10px 0 0 @color-blue;
 }
 
+.main-navigation--closed .main-navigation__toggle:hover::before {
+  opacity: 0.6;
+}
+
+.main-navigation--closed .main-navigation__toggle:active::before {
+  opacity: 0.3;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
+}
+
+
 .main-navigation--opened .main-navigation__toggle {
   top: 0;
   right: 0;

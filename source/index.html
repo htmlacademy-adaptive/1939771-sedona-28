@@ -5,21 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
   <title>HTML Academy: Седона</title>
 </head>
 <body class="page__body">
   <div class="page__wrapper">
     <header class="main-header">
-      <a class="main-header__logo" href="">
-        <img class="logo" src="./img/logo.svg" alt="Седона" width="185" height="96">
+      <a class="main-header__logo" href="#">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/desktop-logo.svg">
+          <source media="(min-width: 768px)" srcset="./img/tablet-logo.svg">
+          <img class="logo" src="./img/logo.svg" alt="Седона" width="185" height="96">
+        </picture>
       </a>
-      <nav class="main-navigation main-navigation--closed">
+      <nav class="main-navigation main-navigation--opened">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--current" href="#">Главная</a>
+            <a class="main-navigation__link main-navigation__link--current" href="./index.html">Главная</a>
           </li>
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="catalog.html">Фото и видео</a>
@@ -36,7 +44,10 @@
     <main class="main-content">
       <h1 class="visually-hidden">Седона</h1>
       <section class="hero">
-        <img class="hero__image hero__image--small" src="./img/welcome-mobile.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/welcome-tablet.svg" width="461" height="340">
+          <img class="hero__image" src="./img/welcome-mobile.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+        </picture>
       </section>
       <section class="welcome">
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
@@ -53,7 +64,10 @@
               <h3 class="about__title">Настоящий городок</h3>
               <p class="about__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="about__image" src="./img/city-mobile.jpg" alt="" width="320" height="260">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/city-desktop.jpg, ./img/city-desktop.jpg 2x">
+              <img class="about__image" src="./img/city-mobile.jpg" alt="город Седона">
+            </picture>
           </li>
           <li class="about__item profits">
             <div class="profits__wrapper">
@@ -84,7 +98,10 @@
               <h3 class="about__title">Там есть мост дьявола</h3>
               <p class="about__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="about__image" src="./img/bridge-mobile.jpg" alt="Мост дьявола" width="320" height="260">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/bridge-desktop.jpg, ./img/bridge-desktop.jpg 2x">
+              <img class="about__image" src="./img/bridge-mobile.jpg" alt="Мост дьявола">
+            </picture>
           </li>
         </ul>
       </section>

@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
   <title>HTML Academy: Седона</title>
 </head>
 <body class="page__body">
@@ -13,7 +17,7 @@
       <a class="main-header__logo main-header__logo--small" href="">
         <img class="logo" src="./img/logo.svg" alt="Добро пожаловать в Седону" width="185" height="96">
       </a>
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--closed">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -36,7 +40,10 @@
     <main class="main-inner">
       <h1 class="visually-hidden">Фото и видео галлерея</h1>
       <section class="hero">
-        <img class="hero__image hero__image--small" src="./img/welcome-inner.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/welcome-inner-big.svg" width="460" height="78">
+          <img class="hero__image-inner" src="./img/welcome-inner.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        </picture>
       </section>
       <section class="catalog">
         <div class="catalog__wrapper">
@@ -51,12 +58,9 @@
             <li class="gallery__item gallery__item--big">
               <a class="gallery__link" href="">
                 <picture>
-                  <!-- desctop -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- tablet -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- mobile -->
-                  <img class="gallery__image" src="./img/gallery-image-1-mobile.jpg.jpg" alt="Закат в каньоне" width="280" height="280">
+                  <source media="(min-width: 1200px)" srcset="./img/gallery-image-1-desktop.jpg, ./img/gallery-image-1-desktop.jpg 2x" />
+                  <source media="(min-width: 768px)" srcset="./img/gallery-image-1-tablet.jpg, ./img/gallery-image-1-tablet.jpg 2x"/>
+                  <img class="gallery__image gallery__image--big" src="./img/gallery-image-1-mobile.jpg" alt="Закат в каньоне" width="280" height="280">
                 </picture>
               </a>
               <div class="gallery__wrapper">
@@ -66,6 +70,14 @@
                 </div>
                 <div class="gallery__like">
                   <button class="gallery__like-button">
+                    <svg class="gallery__like-image" width="22" height="20" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11
+                      19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2
+                      0L6.6 6.6C6.2 6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8
+                      20 18.5 19.5 18.8 18.8L21.8 11.7C21.9 11.5 21.9 11.2 21.9
+                      11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7 1.7 14.5
+                      1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z"/>
+                    </svg>
                     <span class="visually-hidden">Нравиться</span>
                   </button>
                   <span class="gallery__like-count">1350</span>
@@ -75,11 +87,8 @@
             <li class="gallery__item">
               <a class="gallery__link" href="">
                 <picture>
-                  <!-- desctop -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- tablet -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- mobile -->
+                  <source media="(min-width: 1200px)" srcset="./img/gallery-image-2-desktop.jpg, ./img/gallery-image-2-desktop.jpg 2x"/>
+                  <source media="(min-width: 768px)" srcset="./img/gallery-image-2-tablet.jpg, ./img/gallery-image-2-tablet.jpg 2x"/>
                   <img class="gallery__image" src="./img/gallery-image-2-mobile.jpg" alt="Кактус на фоне каньона" width="280" height="280">
                 </picture>
               </a>
@@ -90,6 +99,13 @@
                 </div>
                 <div class="gallery__like">
                   <button class="gallery__like-button">
+                    <svg class="gallery__like-image" width="22" height="20" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11 19.9 11 19.9
+                      11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2 0L6.6 6.6C6.2 6.9 6 7.4 6
+                      8V18C6 19.1 6.9 20 8 20H17C17.8 20 18.5 19.5 18.8 18.8L21.8 11.7C21.9
+                      11.5 21.9 11.2 21.9 11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7
+                      1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z"/>
+                    </svg>
                     <span class="visually-hidden">Нравиться</span>
                   </button>
                   <span class="gallery__like-count">143</span>
@@ -99,11 +115,8 @@
             <li class="gallery__item">
               <a class="gallery__link" href="">
                 <picture>
-                  <!-- desctop -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- tablet -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- mobile -->
+                  <source media="(min-width: 1200px)" srcset="./img/gallery-image-3-desktop.jpg, ./img/gallery-image-3-desktop.jpg 2x"/>
+                  <source media="(min-width: 768px)" srcset="./img/gallery-image-3-tablet.jpg, ./img/gallery-image-3-tablet.jpg 2x"/>
                   <img class="gallery__image" src="./img/gallery-image-3-mobile.jpg" alt="Горная дорога в лесу" width="280" height="280">
                 </picture>
               </a>
@@ -114,6 +127,13 @@
                 </div>
                 <div class="gallery__like">
                   <button class="gallery__like-button">
+                    <svg class="gallery__like-image" width="22" height="20" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9
+                      11 19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2
+                      0L6.6 6.6C6.2 6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8 20
+                      18.5 19.5 18.8 18.8L21.8 11.7C21.9 11.5 21.9 11.2 21.9 11V9H22C22
+                      7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7 1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z"/>
+                    </svg>
                     <span class="visually-hidden">Нравиться</span>
                   </button>
                   <span class="gallery__like-count">96</span>
@@ -123,11 +143,8 @@
             <li class="gallery__item">
               <a class="gallery__link" href="">
                 <picture>
-                  <!-- desctop -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- tablet -->
-                  <source srcset="" media="(min-width:)"/>
-                  <!-- mobile -->
+                  <source media="(min-width: 1200px)" srcset="./img/gallery-image-4-desktop.jpg, ./img/gallery-image-4-desktop.jpg 2x"/>
+                  <source media="(min-width: 768px)" srcset="./img/gallery-image-4-tablet.jpg, ./img/gallery-image-4-tablet.jpg 2x"/>
                   <img class="gallery__image" src="./img/gallery-image-4-mobile.jpg" alt="Каньон" width="280" height="280">
                 </picture>
               </a>
@@ -138,6 +155,12 @@
                 </div>
                 <div class="gallery__like">
                   <button class="gallery__like-button">
+                    <svg class="gallery__like-image" width="22" height="20" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4 3.6L11.8 6.5L11.2 9H13.7H19.9V11C19.9 11 19.9 11 19.9 11.1L17 18H8V8L12.4 3.6ZM2 10V18V10ZM13.2 0L6.6 6.6C6.2
+                      6.9 6 7.4 6 8V18C6 19.1 6.9 20 8 20H17C17.8 20 18.5 19.5 18.8 18.8L21.8
+                      11.7C21.9 11.5 21.9 11.2 21.9 11V9H22C22 7.9 21.1 7 20 7H13.7L14.7 2.4V2.1C14.7
+                      1.7 14.5 1.3 14.3 1L13.2 0ZM4 8H0V20H4V8Z"/>
+                    </svg>
                     <span class="visually-hidden">Нравиться</span>
                   </button>
                   <span class="gallery__like-count">254</span>
@@ -156,8 +179,15 @@
             </p>
           </div>
           <div class="presentation__video-wrapper">
-            <img class="presentation__video-image" src="./img/video-mobile.jpg" alt="Видео" width="280" height="177">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/video-desktop.jpg, ./img/video-desktop.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/video-tablet.jpg, ./img/video-tablet.jpg 2x">
+              <img class="presentation__video-image" src="./img/video-mobile.jpg" alt="Видео" width="280" height="177">
+            </picture>
             <button class="presentation__video-button">
+              <svg class="video-button" width="48" height="54" viewBox="0 0 48 54" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48 27L0 54L2.42273e-06 0L48 27Z"/>
+              </svg>
               <span class="visually-hidden">Воспроизвезти</span>
             </button>
           </div>

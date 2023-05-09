@@ -3,6 +3,43 @@
   margin: 0;
   border: none;
   padding-bottom: 56px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 48px;
+  }
+}
+
+.form-review__title {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18%;
+      height: 1px;
+      background-color: @grey;
+      top: 50%;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after,
+    &::before {
+      width: 30%;
+    }
+  }
 }
 
 .form-review__input {
@@ -15,8 +52,11 @@
   border: none;
   padding: 16px;
   box-sizing: border-box;
+  resize: none;
 
   @media (min-width: @tablet-width) {
     max-height: 160px;
   }
+
+
 }

@@ -41,6 +41,16 @@
   width: 100%;
   height: auto;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    min-height: 267px;
+    object-fit: cover;
+  }
+}
+
+.gallery__image--big {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -65,8 +75,7 @@
     display: flex;
     justify-content: space-between;
     padding: 17px 28px;
-    background-color: @color-black;
-    opacity: 0.3;
+    background-color: @light-black;
     bottom: 0;
   }
 }
@@ -95,7 +104,6 @@
 
   @media (min-width: @desktop-width) {
     color: @color-white;
-    opacity: 1;
   }
 }
 
@@ -110,7 +118,6 @@
 
   @media (min-width: @desktop-width) {
     color: @color-white;
-    opacity: 1;
   }
 }
 
@@ -131,5 +138,19 @@
 
   @media (min-width: @desktop-width) {
     color: @color-white;
+  }
+}
+
+.gallery__like-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  .gallery__like-image {
+    fill: @grey;
+
+    @media (min-width: @desktop-width) {
+      fill: @color-white;
+    }
   }
 }

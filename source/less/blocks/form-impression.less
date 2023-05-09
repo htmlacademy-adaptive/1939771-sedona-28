@@ -1,6 +1,59 @@
 .form-impression {
   width: 100%;
   flex-grow: 1;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background-color: @input-color;
+      bottom: 0;
+      left: calc(100% - 110%);
+    }
+  }
+}
+
+.form-impression__title {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18%;
+      height: 1px;
+      background-color: @grey;
+      top: 50%;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after,
+    &::before {
+      width: 30%;
+    }
+  }
 }
 
 .form-impression__list {
@@ -29,6 +82,10 @@
   display: flex;
   align-items: center;
   gap: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &:hover .form-impression__mark {
     background-color: @input-color;

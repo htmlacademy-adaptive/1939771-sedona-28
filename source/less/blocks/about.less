@@ -30,12 +30,12 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: 256px;
+    max-width: 33.33%;
+    max-height: 256px;
     padding: 52px 33px 31px 33px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
     padding: 52px 50px 51px 50px;
   }
 }
@@ -46,12 +46,12 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    width: 256px;
+    max-width: 33.33%;
+    max-height: 256px;
     padding: 52px 33px 31px 33px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
     padding: 52px 50px 51px 50px;
   }
 }
@@ -84,5 +84,11 @@
 
 .about__image {
   display: block;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+    object-fit: cover;
+  }
 }
 
