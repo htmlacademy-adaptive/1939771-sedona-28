@@ -1,8 +1,29 @@
+.form {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 338px;
+      background-color: @grey;
+      right: 50%;
+      top: -5px;
+    }
+  }
+}
+
 .form__fieldset {
   padding: 0;
   padding-bottom: 20px;
   margin: 0;
   border: none;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
 }
 
 .form__title {
@@ -16,7 +37,9 @@
   color: @color-black;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 28px;
+    padding: 0;
+    margin-bottom: 28px;
+    font-size: 21px;
   }
 }
 

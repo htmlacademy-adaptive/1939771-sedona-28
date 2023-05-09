@@ -5,13 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
   <title>HTML Academy: Седона</title>
 </head>
 <body class="page__body">
   <div class="page__wrapper">
     <header class="main-header">
-      <a class="main-header__logo main-header__logo--small" href="">
-        <img class="logo" src="./img/logo.svg" alt="Седона" width="185" height="96">
+      <a class="main-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/desktop-logo.svg">
+          <source media="(min-width: 768px)" srcset="./img/tablet-logo.svg">
+          <img class="logo" src="./img/logo.svg" alt="Седона" width="185" height="96">
+        </picture>
       </a>
       <nav class="main-navigation main-navigation--closed">
         <button class="main-navigation__toggle" type="button">
@@ -36,7 +44,10 @@
     <main class="main-inner">
       <h1 class="visually-hidden">Седона</h1>
       <section class="hero">
-        <img class="hero__image hero__image--small" src="./img/welcome-inner.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/welcome-inner-big.svg" width="460" height="78">
+          <img class="hero__image-inner" src="./img/welcome-inner.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        </picture>
       </section>
       <section class="review">
         <div class="review__wrapper">
@@ -80,13 +91,15 @@
               <li class="form-contacts__item">
                 <label class="form-contacts__control">
                   <span class="form-contacts__control-title">Контактный телефон*:</span>
-                  <input class="form-contacts__input form-contacts__input-phone" type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <input class="form-contacts__input" type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <span class="form-contacts__input-phone"></span>
                 </label>
               </li>
               <li class="form-contacts__item">
                 <label class="form-contacts__control">
                   <span class="form-contacts__control-title">Электронная почта*:</span>
-                  <input class="form-contacts__input form-contacts__input-email" type="email" name="email" id="email" placeholder="Введите e-mail">
+                  <input class="form-contacts__input" type="email" name="email" id="email" placeholder="Введите e-mail">
+                  <span class="form-contacts__input-email"></span>
                 </label>
               </li>
             </ul>
