@@ -39,6 +39,7 @@
 
 .advantages__item-wrapper {
   text-align: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -50,6 +51,33 @@
   }
 }
 
+.advantages__item-area::after {
+  position: absolute;
+  content: "-№3-";
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  color: @color-black;
+}
+
+.advantages__item-road::after {
+  position: absolute;
+  content: "-№4-";
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  color: @color-black;
+}
+
+
+.advantages__item-tourist::after {
+  position: absolute;
+  content: "-№5-";
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  color: @color-black;
+}
 
 .advantages__title {
   margin-top: 0;
