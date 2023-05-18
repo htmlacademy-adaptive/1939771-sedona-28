@@ -3,7 +3,7 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import csso from 'gulp-csso';
+import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
@@ -141,7 +141,6 @@ export const build = gulp.series(
   gulp.parallel(
   styles,
   html,
-  scripts,
   svg,
   sprite,
   createWebp
@@ -157,7 +156,6 @@ export default gulp.series(
   gulp.parallel(
   styles,
   html,
-  scripts,
   svg,
   sprite,
   createWebp
