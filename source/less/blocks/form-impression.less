@@ -2,13 +2,14 @@
   width: 100%;
   flex-grow: 1;
   position: relative;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 60px;
   }
 
   @media (max-width: @mobile-width-only) {
@@ -18,7 +19,7 @@
       width: 100vw;
       height: 1px;
       background-color: @input-color;
-      bottom: 0;
+      bottom: -25px;
       left: calc(100% - 110%);
     }
   }
@@ -57,7 +58,8 @@
 }
 
 .form-impression__list {
-  margin: 0;
+  width: 97%;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -65,16 +67,21 @@
   gap: 16px;
 
   @media (min-width: @tablet-width) {
-    width: 88%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    column-gap: 25px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    width: 81%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 39px;
   }
 }
 
@@ -107,6 +114,11 @@
   line-height: 26px;
   text-transform: none;
   color: @color-black;
+  white-space: nowrap;
+
+  @media (min-width: @desktop-width) {
+    white-space: nowrap;
+  }
 }
 
 .form-impression__mark {

@@ -2,8 +2,12 @@
   background-color: @color-grey;
   background-image: url("../img/devider-mobile.svg"), url("../img/hero-background.jpg");
   background-repeat: no-repeat;
+  background-position: bottom, center;
   background-size: contain, cover;
-  background-position: center bottom, center;
+
+  @media (min-width: @desktop-width) {
+    background-position: bottom, bottom;
+  }
 
   @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
     background-image: url("../img/devider-tablet.svg"), url("../img/bg-desktop.jpg");
@@ -16,7 +20,7 @@
 
 .hero__image {
   padding-top: 90px;
-  padding-bottom: 60px;
+  padding-bottom: 85px;
   display: block;
   margin: 0 auto;
 
@@ -26,7 +30,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 78px;
+    padding-top: 88px;
     padding-bottom: 90px;
   }
 }
@@ -34,10 +38,9 @@
 
 .hero__image-inner {
   padding-top: 52px;
-  padding-bottom: 49px;
+  padding-bottom: 67px;
   display: block;
   margin: 0 auto;
-  width: 100%;
 
   @media (min-width: @tablet-width) {
     padding-top: 95px;
@@ -46,6 +49,6 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 101px;
-    padding-bottom: 120px;
+    padding-bottom: 122px;
   }
 }

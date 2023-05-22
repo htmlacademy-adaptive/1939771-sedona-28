@@ -108,12 +108,12 @@
 .main-navigation--closed .main-navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 20px;
-  left: 23px;
+  top: 16px;
+  left: 25px;
   width: 23px;
-  height: 4px;
+  height: 5px;
   background-color: @color-blue;
-  box-shadow: 0 5px 0 0 @color-blue, 0 10px 0 0 @color-blue;
+  box-shadow: 0 9px 0 0 @color-blue, 0 18px 0 0 @color-blue;
 }
 
 .main-navigation--closed .main-navigation__toggle:hover::before {
@@ -161,4 +161,8 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.main-navigation--opened .main-header__logo {
+  display: none;
 }

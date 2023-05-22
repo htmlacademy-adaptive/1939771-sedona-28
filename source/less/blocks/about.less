@@ -25,10 +25,16 @@
 }
 
 .about__item-city {
-  padding: 54px 18px 40px 18px;
+  padding: 70px 12px 40px;
   text-align: center;
   box-sizing: border-box;
   position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    background-image: url("../img/devider-blue.png");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
 
   &::after {
     position: absolute;
@@ -95,6 +101,12 @@
     font-weight: 700;
     font-size: 21px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 64px;
+    padding-right: 64px;
+    margin-bottom: 59px;
+  }
 }
 
 .about__description {
@@ -107,7 +119,7 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    height: 256px;
+    height: 257px;
     object-fit: cover;
   }
 }

@@ -1,15 +1,15 @@
-let nav = document.querySelector(".nav");
-let toggle = document.querySelector(".nav__toggle");
+let nav = document.querySelector(".main-navigation");
+let toggle = document.querySelector(".main-navigation__toggle");
 
 nav.classList.remove("nav--nojs");
 
 toggle.addEventListener("click", function () {
-  if (nav.classList.contains("nav--closed")) {
-    nav.classList.remove("nav--closed");
-    nav.classList.add("nav--opened");
+  if (nav.classList.contains("main-navigation--closed")) {
+    nav.classList.remove("main-navigation--closed");
+    nav.classList.add("main-navigation--opened");
   } else {
-    nav.classList.add("nav--closed");
-    nav.classList.remove("nav--opened");
+    nav.classList.add("main-navigation--closed");
+    nav.classList.remove("main-navigation--opened");
   }
 });
 
