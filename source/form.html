@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -40,14 +42,14 @@
   </svg>
   <div class="page__wrapper">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/desktop-logo.svg">
-          <source media="(min-width: 768px)" srcset="./img/tablet-logo.svg">
-          <img class="logo" src="./img/logo.svg" alt="Седона" width="185" height="96">
-        </picture>
-      </a>
       <nav class="main-navigation main-navigation--closed">
+        <a class="main-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/desktop-logo.svg">
+            <source media="(min-width: 768px)" srcset="./img/tablet-logo.svg">
+            <img class="logo" src="./img/logo.svg" alt="Седона" width="185" height="96">
+          </picture>
+        </a>
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -265,4 +267,5 @@
     </div>
   </div>
 </body>
+<script src="./js/script.js"></script>
 </html>

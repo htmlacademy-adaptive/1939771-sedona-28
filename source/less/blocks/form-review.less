@@ -6,7 +6,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin-bottom: 48px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
   }
 }
 
@@ -52,14 +56,19 @@
   line-height: 26px;
   border: none;
   padding: 16px;
+  margin: 0 auto;
   box-sizing: border-box;
   resize: none;
   color: @text-color;
   outline: none;
+  display: block;
 
   @media (min-width: @tablet-width) {
     max-height: 160px;
+    width: 96%;
   }
 
-
+  @media (min-width: @desktop-width) {
+    width: 73%;
+  }
 }
