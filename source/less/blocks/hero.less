@@ -2,14 +2,19 @@
   background-color: @color-grey;
   background-image: url("../img/devider-mobile.svg"), url("../img/hero-background.jpg");
   background-repeat: no-repeat;
-  background-position: bottom, bottom;
+  background-position: bottom center;
+  background-size: auto, 901px;
 
+  @media (min-width: @tablet-width) {
+    background-position: bottom, bottom;
+    background-size: auto;
+  }
 
-  @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+  @media (min-width: @tablet-width), (min-resolution: 2dppx) {
     background-image: url("../img/devider-tablet.svg"), url("../img/bg-desktop.jpg");
   }
 
-  @media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+  @media (min-width: @desktop-width), (min-resolution: 2dppx) {
     background-image: url("../img/devider-desktop.svg"), url("../img/bg-desktop.jpg");
   }
 }
