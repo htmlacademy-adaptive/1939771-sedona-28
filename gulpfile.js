@@ -68,12 +68,12 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () =>
+export const svg = () =>
 gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
 .pipe(svgo())
 .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
+export const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
